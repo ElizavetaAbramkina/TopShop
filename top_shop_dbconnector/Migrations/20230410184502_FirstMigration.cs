@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace top_shop_dbconnector.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "Clients",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     Discount = table.Column<double>(type: "float", nullable: false, defaultValue: 0.0),
@@ -31,7 +31,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "ItemTypes",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -43,7 +43,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "Providers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     TIN = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
@@ -57,7 +57,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "Warehouses",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
@@ -69,7 +69,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     TotalPrice = table.Column<double>(type: "float", nullable: false),
                     ClientId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
@@ -88,7 +88,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "Items",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Name = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
@@ -116,7 +116,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "ItemOrders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Amount = table.Column<int>(type: "int", nullable: false),
                     Discount = table.Column<double>(type: "float", nullable: false),
                     OrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -143,7 +143,7 @@ namespace top_shop_dbconnector.Migrations
                 name: "ItemWarehouses",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUETIALID()"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "NEWSEQUENTIALID()"),
                     Amount = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     WarehouseId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),

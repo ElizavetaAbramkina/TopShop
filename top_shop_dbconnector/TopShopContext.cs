@@ -4,7 +4,7 @@ using top_shop_models;
 
 namespace top_shop_dbconnector
 {
-    internal class TopShopContext : DbContext
+    public class TopShopContext : DbContext
     {
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<Provider> Providers { get; set; }
@@ -26,7 +26,7 @@ namespace top_shop_dbconnector
             {
                 modelBuilder.Entity(entity.ClrType)
                     .Property("Id")
-                    .HasDefaultValueSql("NEWSEQUETIALID()");
+                    .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                 modelBuilder.Entity<Client>().Property(nameof(Client.Discount)).HasDefaultValue(0);
 

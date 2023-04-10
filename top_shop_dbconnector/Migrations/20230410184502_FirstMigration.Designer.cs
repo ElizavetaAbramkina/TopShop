@@ -12,8 +12,8 @@ using top_shop_dbconnector;
 namespace top_shop_dbconnector.Migrations
 {
     [DbContext(typeof(TopShopContext))]
-    [Migration("20230331180254_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230410184502_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<double>("Discount")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -101,7 +101,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
@@ -129,7 +129,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -146,7 +146,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
@@ -175,7 +175,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");
@@ -195,7 +195,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -222,7 +222,7 @@ namespace top_shop_dbconnector.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWSEQUETIALID()");
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<string>("Name")
                         .IsRequired()
